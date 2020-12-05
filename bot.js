@@ -1,11 +1,12 @@
 const { Client, Chat } = require('whatsapp-web.js');
 const AWS = require('aws-sdk');
+AWS.config.update({region: 'us-east-1'});
 const uuid = require('uuid');
 const i = 0;
 const db = new AWS.DynamoDB.DocumentClient();
 let sessionData, client;
 function sleep (time) { return new Promise((resolve) => setTimeout(resolve, time)); }
-AWS.config.update({region: 'us-east-1'});
+
 
 if(process.env.WABrowserId){
     sessionData = { 
