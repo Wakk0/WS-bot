@@ -39,6 +39,10 @@ async function PresenceStatus() {
 
 PresenceStatus();
 
+client.on('ready', () => {
+    console.log('WhatsApp Client Connected!');
+});
+
 client.on('message', async (msg) => {
     client.sendPresenceAvailable();
 });
