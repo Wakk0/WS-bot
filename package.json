@@ -1,0 +1,18 @@
+{
+  "name": "whatsappboty",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot from a API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "author": "",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "aws-sdk": "^2.803.0",
+    "qrcode-terminal": "^0.12.0",
+    "uuid": "^8.3.1",
+    "whatsapp-web.js": "^1.11.1"
+  }
+}
