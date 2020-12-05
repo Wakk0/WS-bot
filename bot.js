@@ -3,7 +3,7 @@ const AWS = require('aws-sdk');
 const uuid = require('uuid');
 const i = 0;
 const db = new AWS.DynamoDB.DocumentClient();
-let sessionData
+let sessionData, client;
 function sleep (time) { return new Promise((resolve) => setTimeout(resolve, time)); }
 AWS.config.update({region: 'us-east-1'});
 

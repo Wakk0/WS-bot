@@ -4,7 +4,6 @@
   "description": "WhatsApp Bot from a API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
   },
   "author": "",
