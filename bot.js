@@ -9,7 +9,7 @@ function sleep (time) { return new Promise((resolve) => setTimeout(resolve, time
 
 const express = require('express')
 const app = express()
-const port = 80
+const port = process.env.PORT
 
 app.get('/', (req, res) => {
   res.send('WhatsAppo is running!')
