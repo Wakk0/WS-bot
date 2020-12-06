@@ -7,6 +7,15 @@ const db = new AWS.DynamoDB.DocumentClient();
 let sessionData, client;
 function sleep (time) { return new Promise((resolve) => setTimeout(resolve, time)); }
 
+const express = require('express')
+const app = express()
+const port = 80
+
+app.get('/', (req, res) => {
+  res.send('WhatsAppo is running!')
+})
+
+app.listen(port);
 
 if(process.env.WABrowserId){
     sessionData = { 
@@ -66,5 +75,5 @@ client.on('message_revoke_everyone', async (msg,rmsg) => {
     };
 
     await db.put(dataDB).promise();
-    console.log(rmsg);
+    // console.log(rmsg);
 });
